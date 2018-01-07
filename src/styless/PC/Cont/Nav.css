@@ -1,0 +1,17 @@
+.nav{
+	width:80%;
+	margin-left:40px;
+	display: flex;
+	flex-direction:row;
+}
+.ant-dropdown-link{
+	color:black;
+	width:100px;
+	display:block;
+	text-align:center;
+	border-bottom:3px solid white;
+	padding:5px;
+}
+.ant-dropdown-link:hover{
+	border-bottom:3px solid red;
+}
