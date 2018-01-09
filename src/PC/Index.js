@@ -6,7 +6,7 @@ import Seach from './Comm/seach.js';
 import Footer from './Comm/Footer.js';
 import UseConv from './Cont/UseConve.js';
 import Nav from './Cont/Nav.js';
-import Banner from './Cont/banner.js';
+import BannerBox from './Cont/BannerBox.js';
 import CustSever from './Comm/CustSever.js';
 
 
@@ -23,7 +23,7 @@ export default class PC extends React.Component{
 					{/*导航栏*/}
 					<Nav />
 					{/*轮播图*/}
-					<Banner />
+					<BannerBox />
 					{/*服务*/}
 					<CustSever />
 				</div>

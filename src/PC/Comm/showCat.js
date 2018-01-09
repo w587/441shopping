@@ -1,21 +1,24 @@
 import React from 'react';
 
-import { Input,Button,Icon } from 'antd';
+import { Menu, Dropdown, Icon, message,Input} from 'antd';
+
 const Search = Input.Search;
+
+const menu = (
+  <Menu style={{width:250}}>
+    <Menu.Item style={{textAlign:'center'}} key="1">暂无商品</Menu.Item>
+  </Menu>
+);
+
 
 export default class showCat extends React.Component{
 	render(){
 		return (
-		<Button style={{
-			width:150,
-			cssFloat:'right',
-			marginTop:20,
-			height:40}} 
-			size='large' 
-			type="primary">
-			<Icon type="shopping-cart" />
-			购物车
-		</Button>	
+		<Dropdown overlay={menu}>
+  		  <a className="ant-dropdown-link show_cat" href="#">
+  		   <Icon type="shopping-cart" /> 购物车 (0)
+  		  </a>
+  		</Dropdown>
 		);
 	}
 }

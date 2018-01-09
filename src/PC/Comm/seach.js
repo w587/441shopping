@@ -6,15 +6,17 @@ const Search = Input.Search;
 export default class seach extends React.Component{
 	render(){
 		return (
-			<div style={{
+			<div className='seach' style={{
 				width:'30%',
-				cssFloat:'right',
+				height:50,
 				marginTop:20,
 				marginRight:20}}>
-				<Search 
-				placeholder="T恤" 
-				enterButton="搜索" 
-				size="large" />
+				 <Search
+				 	size="large"
+				 	style={{color:'black'}}
+     				placeholder="input search text"
+     				onSearch={value => console.log(value)}
+     				enterButton/>
 			</div>	
 		);
 	}

@@ -11,34 +11,29 @@ export default class Nav extends React.Component{
 	render(){
 
 		var Drop=navData.map((item,index)=>{
-			var Drop=item.item.map((it,id)=>{
-  				 return <Menu.Item key={id} style={{textAlign:'center'}}>{it}</Menu.Item>
-			})
-
-			var menu=(<Menu>{Drop}</Menu>)
-
 			return (
-				<Dropdown key={index} style={{width:50}} overlay={menu}>
-  				  <a  className="ant-dropdown-link" href="#">
+  				  <a key={index} style={{color:'black',fontSize:15,fontWeight:'bold'}} className="ant-dropdown-link" href="#">
   				   {item.name}
   				  </a>
-  				</Dropdown>
 				)
 		})
 
 		return (
-			<div style={{width:'100%',display: 'flex',flexDirection: 'row',alignItems:'center'}}>
-					<div style={{width:'20%'}}>
-						<img style={{width:'100%',height:'100px'}} src='./src/imges/logo.jpg' />
-					</div>
+			<div style={{width:'100%',
+			display: 'flex',
+			flexDirection: 'row',
+			alignItems:'center'}}>
+					
 					<div className='nav'>
-						<a className="ant-dropdown-link" href="#">
-  					    首页
-  					  	</a>
+						<span style={{
+							height:30,
+							backgroundColor:'IndianRed',
+							color:'white',
+							width:200,
+							lineHeight:'30px',
+							paddingLeft:20,
+							paddingRight:20}}><span>全部分类</span><Icon style={{cssFloat:'right',lineHeight:'30px'}} type="caret-down" /></span>
 						{Drop}
-						<a className="ant-dropdown-link" href="#">
-  						    私人定制
-  						</a>
 					</div>
 			</div>
 		);

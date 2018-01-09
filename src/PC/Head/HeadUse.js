@@ -1,17 +1,22 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import ShowCat from '../comm/showCat.js';
 
-import { Icon } from 'antd';
+import { Menu, Dropdown, Icon, message,Input  } from 'antd';
+
+require('../../styless/PC/comm/HeadUse.css')
+
+
 export default class Use extends React.Component{
 	render(){
 		return (
-			<div style={{width:'100%',height:30,backgroundColor:'rgb(247, 247, 247)',borderBottom:'1px solid gray'}}>
-				<div style={{cssFloat:'right',marginRight:20}}>
-					<span style={{marginLeft:20}}>您好，欢迎光临441商城</span>
-					<span style={{marginLeft:20,marginRight:20}}>登陆</span>|
-					<span style={{marginLeft:20}}>注册</span>
-					<span style={{marginLeft:20}}>我的订单</span>
-					<span style={{marginLeft:20}}><Icon style={{color:'red'}} type="sound" />网站通知</span>
+			<div style={{width:'100%',height:40,backgroundColor:'rgb(30,30,30)',borderBottom:'1px solid gray'}}>
+				<div className='HeadUseBox'>
+					<span style={{marginLeft:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>您好，欢迎光临441商城</span>
+					<span style={{marginLeft:20,marginRight:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>登陆</span>
+					<span style={{color:'rgb(180,180,180)',lineHeight:"40px"}}>|</span>
+					<span style={{marginLeft:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>注册</span>
+					<ShowCat />
 				</div>
 			</div>
 		);

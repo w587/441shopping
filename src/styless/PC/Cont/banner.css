@@ -2,6 +2,7 @@
   text-align: center;
   background: #364d79;
   overflow: hidden;
+  height: 500px;
 }
 
 .ant-carousel .slick-slide h3 {
