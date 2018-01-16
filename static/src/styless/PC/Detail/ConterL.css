@@ -1,0 +1,69 @@
+.DetailConter .ConterL{
+	height: 300px;
+	flex:1;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+
+}
+
+.DetailConter .ConterL .MoveBlock{
+	position: absolute;
+	background-color: rgba(200,200,200,0.5);
+	width: 250px;
+	height: 250px;
+
+}
+
+ .ConterL_Big{
+	position: absolute;
+	height: 500px;
+	width: 500px;
+	overflow: hidden;
+	left: 35%;
+}
+
+.DetailConter .ConterL .ConterL_T{
+	background-color: blue;
+	flex:3;
+}
+
+.DetailConter .ConterL .ConterL_T img{
+	width: 100%;
+	height: 100%;
+}
+
+.DetailConter .ConterL .ConterL_B{
+	background-color: green;
+	flex:1;
+}
+
+.DetailConter .ConterL .ConterL_B ul{
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	border-top: 1px solid gray;
+	height: 100%;
+	margin: 0;
+}
+
+.DetailConter .ConterL .ConterL_B ul li{
+	flex:1;
+	margin: 0;
+	border: 1px solid white
+}
+
+.DetailConter .ConterL .ConterL_B ul li:hover{
+	border: 1px solid red
+}
+
+.DetailConter .ConterL .ConterL_B ul li img{
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,57 @@
+.BigModule{
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+
+}
+.BigModule .title{
+	display: flex;
+	flex:1;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:center;
+
+}
+.BigModule .BigModuIBox{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.BigModule .BigModuleR{
+	flex:2;
+	height: 614px;	
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	flex-wrap:wrap;
+}
+.BigModule .BigModuleR .BigModuItem{
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	margin-left:14px;
+	margin-bottom: 14px; 
+	width: 230px;
+	height: 300px;
+
+}
+.BigModule .BigModuleR .BigModuItem img{
+	width: 100%;
+
+}
+.BigModule .BigModuleR .BigModuItem .ItemTitle{
+	width: 100%;
+	height: 20px;
+	font-size: 12px;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.BigModule .BigModuleR .BigModuItem p{
+	margin:0;
+}

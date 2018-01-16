@@ -1,0 +1,40 @@
+#Detail{
+	width: 100%;
+}
+
+.DetailConter{
+	width: 90%;
+	height: 700px;
+	margin: 0 auto;
+  margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-content {
+  height: 120px;
+  margin-top: -16px;
+
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+  background: #fff;
+  padding: 16px;
+
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar {
+  color: black;
+  border-color: red;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+  border-color: transparent;
+  background: white;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+  color:white;
+  border-color: #fff;
+  background: red;
+}

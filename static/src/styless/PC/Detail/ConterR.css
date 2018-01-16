@@ -1,0 +1,68 @@
+
+.DetailConter .ConterR{
+	flex:2;
+
+	border: 1px solid blue;
+	padding: 20px;
+}
+.DetailConter .ConterR .PriceWarp{
+
+}
+.selColor{
+	width: 100%;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	align-items:center;
+}
+.selColorBox{
+	width: 80%;
+}
+.selColorBox li{
+	border: 1px solid gray;
+	float: left;
+	width:100px;
+	height:44px;
+	background-color: rgb(240,240,240);
+	margin-left: 10px;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items:center;
+}
+.selCount{
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+}
+.NumControl{
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+.NumControl button{
+	height: 25px;
+}
+.ShowCart{
+	width: 200px;
+	height: 50px;
+	background-color: red;
+	color:white;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+}

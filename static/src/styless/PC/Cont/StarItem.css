@@ -1,0 +1,64 @@
+.StarItem{
+	width: 100%;
+	margin-top: 20px;
+	overflow:hidden;
+}
+.StarItem .title{
+    width: 100%;
+}
+
+.StarItem .item{
+	width: 232px;
+	position: relative;
+	border-top:solid 1px blue;
+	display:inline-block;
+	white-space:nowrap;
+	margin-right:10px;
+	
+}
+
+
+
+.StarItem .item span{
+	height: 18px;
+	margin: 0 20px 12px;
+	font-size: 12;
+	width: 100%;
+	display: block;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+	color: #b0b0b0;
+
+}
+.StarItem .itemBox{
+	margin-top: 30px;
+	height: 260px;
+	overflow: hidden;
+	display:inline-block;
+	white-space:nowrap;
+}
+.moveL{
+	animation: moveL 1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes moveL
+{
+    from {margin-left: 0;}
+    to {margin-left: -968px;}
+}
+
+.moveR{
+	animation: moveR 1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes moveR
+{
+    from {margin-left: -968px;}
+    to {margin-left: 0}
+}
+.IBox{
+
+}

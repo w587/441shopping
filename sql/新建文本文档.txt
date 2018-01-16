@@ -1,0 +1,19 @@
+911系列：1  Dino系列:2  ST系列：3 台式机：4
+
+
+SELECT 	id, 
+	good_cate, 
+	good_name, 
+	good_title, 
+	good_price, 
+	good_comm, 
+	good_img
+	 
+	FROM 
+	441shopping.goodtable 
+	LIMIT 0, 50;
+	
+随机查询
+SELECT * FROM goodtable ORDER BY RAND() LIMIT 9
+
+SELECT * FROM goodtable WHERE good_cate='4'

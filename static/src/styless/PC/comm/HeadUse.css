@@ -1,0 +1,57 @@
+.HeadUseBox{
+	width: 40%;
+	float: right;
+	margin-right: 20px;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-around;
+}
+.MenuBox{
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	
+}
+.HeadUseBox .show_cat{
+	width: 130px;
+	text-align: center;
+	background-color: rgb(80,80,80);
+	color: #b0b0b0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
+
+}
+.HeadUseBox .show_cat:hover{
+	color:OrangeRed;
+	background-color: white;
+}
+.seach .ant-btn-primary{
+	background-color: black;
+	border-color:black;
+}
+.seach .ant-btn-primary:hover{
+	background-color: black;
+	border-color:black;
+}
+.UseConv{
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-between;
+}
+.MenuItem{
+
+}
