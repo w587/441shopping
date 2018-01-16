@@ -1,7 +1,6 @@
 {
   "name": "441",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "antd": "^3.1.0",
@@ -11,9 +10,11 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.8",
     "es2015": "0.0.0",
+    "rc-tween-one": "^1.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-responsive": "^4.0.3",
+    "react-router-dom": "^4.2.2",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   },
@@ -25,5 +26,14 @@
     "app": "webpack --progress --display-reasons --colors --wtach"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w587/441shopping.git"
+  },
+  "bugs": {
+    "url": "https://github.com/w587/441shopping/issues"
+  },
+  "homepage": "https://github.com/w587/441shopping#readme",
+  "description": ""
 }

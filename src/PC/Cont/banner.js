@@ -15,6 +15,6 @@ export default class Banner extends React.Component{
 			<Carousel autoplay>
   			  {items}
   			</Carousel>
-		);
+		)
 	}
 }

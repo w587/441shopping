@@ -4,9 +4,14 @@ import MediaQuery from 'react-responsive';
 
 import 'antd/dist/antd.css';
 
-import PC from './PC/Index.js'
+import PC from './PC/PC.js'
 import Phone from './Phone/Index.js'
 
+import {Router,
+  Route,
+  HashRouter,
+  hashHistory,
+  Switch} from 'react-router-dom'
 
 export default class App extends React.Component{
 	render(){

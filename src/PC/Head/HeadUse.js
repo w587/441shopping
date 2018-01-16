@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import ShowCat from '../comm/showCat.js';
+import ShowCat from '../comm/ShowCat.js';
 
 import { Menu, Dropdown, Icon, message,Input  } from 'antd';
 
@@ -19,6 +19,7 @@ export default class Use extends React.Component{
 					<ShowCat />
 				</div>
 			</div>
-		);
+		)
+		
 	}
 }

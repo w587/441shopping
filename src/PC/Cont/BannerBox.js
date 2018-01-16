@@ -11,9 +11,9 @@ export default class BannerBox extends React.Component{
 	render(){
 		return (
 			<div>
-
+				{/*轮播图*/}
 				<Banner />
-
+				{/*左侧菜单*/}
 				<MenuBox />
 			</div>
 			

@@ -11,7 +11,7 @@ const menu = (
 );
 
 
-export default class showCat extends React.Component{
+export default class ShowCat extends React.Component{
 	render(){
 		return (
 		<Dropdown overlay={menu}>
