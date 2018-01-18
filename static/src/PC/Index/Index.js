@@ -16,7 +16,7 @@ export default class Index extends React.Component{
 		var than=this
       	console.log('componentWillMount');
 
-      	fetch(`http://127.0.0.1:3000/index?name=1`).then((response)=>{
+      	fetch(`http://127.0.0.1:3000/PC?name=1`).then((response)=>{
 		  return response.json();
 		}).then((data)=>{
 		 	console.log(data)

@@ -37,7 +37,7 @@ export default class ConterL extends React.Component{
 			'display':'none'
 		}
 
-		var bigs={     'marginLeft':(-this.state.X+110)*2.7,
+		var bigs={'marginLeft':(-this.state.X+110)*2.7,
 		'marginTop':(-this.state.Y+200)*1.6 }
 
 		return (	

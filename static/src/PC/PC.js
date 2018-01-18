@@ -18,7 +18,7 @@ export default class PC extends React.Component{
          		    <Switch>
          		      <Route exact path="/" component={Index}/>
          		      {/*传递参数*/}
-                  <Route path="/detile" component={Detile}/>
+                  <Route path="/detile/:id" component={Detile}/>
          		      <Route path="/ShowCart" component={ShowCart}/>
          		    </Switch>
          		</HashRouter>

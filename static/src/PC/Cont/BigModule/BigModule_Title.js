@@ -26,7 +26,6 @@ export default class BigModule_Title extends React.Component{
 		)
 	}
 	callback(key){
-		console.log(key)
 		this.props.changes(key)
 	}
 }
