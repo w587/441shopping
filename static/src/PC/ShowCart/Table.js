@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 import TableItem from './TablesItem.js'
+import Loading from '../comm/Loading.js'
 
 require('../../styless/PC/Detail/table.css')
 
@@ -12,13 +13,7 @@ const CheckboxGroup = Checkbox.Group;
 const plainOptions = ['Apple', 'Pear', 'Orange'];
 const defaultCheckedList = [];
 
-var datas=[
-      {"id":0,"name":"雷神911Targa-T6D","img":"http://www.leishen.cn/images/201712/thumb_img/501_thumb_G_1512686751773.jpg","price":999,"num":"2","prices":1998},
-      {"id":1,"name":"雷神911Targa-T6D","img":"http://www.leishen.cn/images/201712/thumb_img/501_thumb_G_1512686751773.jpg","price":999,"num":"2","prices":1998},
-      {"id":2,"name":"雷神911Targa-T6D","img":"http://www.leishen.cn/images/201712/thumb_img/501_thumb_G_1512686751773.jpg","price":999,"num":"2","prices":1998},
-      {"id":3,"name":"雷神911Targa-T6D","img":"http://www.leishen.cn/images/201712/thumb_img/501_thumb_G_1512686751773.jpg","price":999,"num":"2","prices":1998},
-      {"id":4,"name":"雷神911Targa-T6D","img":"http://www.leishen.cn/images/201712/thumb_img/501_thumb_G_1512686751773.jpg","price":999,"num":"2","prices":1998}
-  ]
+
 
 export default class ShowCart extends React.Component{
   constructor(){
@@ -27,12 +22,23 @@ export default class ShowCart extends React.Component{
       checkedList: [],
         indeterminate: true,
         checkAll: false,
-        money:0
+        money:0,
+        datass:[]
     }
   }
 
+  componentWillMount(){
+      fetch(`http://127.0.0.1:3000/PC/ShowCart`).then((response)=>{
+        return response.json();
+      }).then((data)=>{
+        this.setState({
+          datass:data
+        })
+      })
+  }
+
   render(){
-    var items=datas.map((item,index)=>{
+    var items=this.state.datass.length==0?<Loading />:this.state.datass.map((item,index)=>{
       return (<TableItem key={index} datas={item}/>)
     })
 
@@ -88,10 +94,17 @@ export default class ShowCart extends React.Component{
   }
 
     onChange(checkedList){
+
+      var datas=this.state.datass
+
       var m=0;
       checkedList==[]?0:
       checkedList.forEach(function(item,index){
-        m+=parseInt(datas[item].prices)
+        datas.forEach(function(it,ind){
+          if (it.id==item) {
+            m+=parseInt(it.price)*parseInt(it.good_num)
+          }
+        })        
       })
       
       this.setState({
@@ -103,9 +116,11 @@ export default class ShowCart extends React.Component{
     }
 
     onCheckAllChange(e){
+      var datas=this.state.datass
+
       var m=0;
       var def=e.target.checked ? datas.map((item,index)=>{
-            m+=item.prices
+            m+=parseInt(item.price)*parseInt(item.good_num)
             return item.id
       }) : []
 

@@ -23,6 +23,23 @@ export default class Index extends React.Component{
 		})
 
   	}
+  	 //组件是否要被重新渲染
+	  shouldComponentUpdate(){
+	      console.log('shouldComponentUpdate');
+	      return true;
+	  }
+	  //组件将要被重新渲染
+	  componentWillUpdate(){
+	      console.log('componentWillUpdate');
+	  }
+	   //组件已经被重新渲染
+	   componentDidUpdate(){
+	       console.log('componentDidUpdate');
+	   }
+	  //组件将要接收到新属性
+	  componnentWillReceiveProps(){
+	      console.log('componnentWillReceiveProps');
+	  }
 	render(){
 		
 		return (

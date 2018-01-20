@@ -77,13 +77,17 @@ export default class Detail extends React.Component{
 							<button>+</button>
 							<button>-</button>
 						</div>
-						<Link to='/ShowCart' className='ShowCart'>加入购物车</Link>
+						<Link onClick={this.click.bind(this)} to='/ShowCart' className='ShowCart'>加入购物车</Link>
 					</div>
 				</div>
 
   			</div>
 		);
 	}	
-	
+	click(){
+		console.log('进入购物车',this.props.datas.id)
+		var than=this
+      	fetch(`http://127.0.0.1:3000/PC/detail/ShowCart?id=${this.props.datas.id}`)
+	}
 	
 }
