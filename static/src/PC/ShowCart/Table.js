@@ -28,7 +28,7 @@ export default class ShowCart extends React.Component{
   }
 
   componentWillMount(){
-      fetch(`http://127.0.0.1:3000/PC/ShowCart`).then((response)=>{
+      fetch(`http://127.0.0.1:3333/PC/ShowCart`).then((response)=>{
         return response.json();
       }).then((data)=>{
         this.setState({
@@ -102,7 +102,7 @@ export default class ShowCart extends React.Component{
       checkedList.forEach(function(item,index){
         datas.forEach(function(it,ind){
           if (it.id==item) {
-            m+=parseInt(it.price)*parseInt(it.good_num)
+            m+=parseInt(it.good_price)*parseInt(it.good_num)
           }
         })        
       })
@@ -120,7 +120,7 @@ export default class ShowCart extends React.Component{
 
       var m=0;
       var def=e.target.checked ? datas.map((item,index)=>{
-            m+=parseInt(item.price)*parseInt(item.good_num)
+            m+=parseInt(item.good_price)*parseInt(item.good_num)
             return item.id
       }) : []
 

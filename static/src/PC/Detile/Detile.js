@@ -18,7 +18,7 @@ export default class Detile extends React.Component{
 
     componentWillMount(){
 		var than=this
-      	fetch(`http://127.0.0.1:3000/PC/detail?id=${this.props.match.params.id}`).then((response)=>{
+      	fetch(`http://127.0.0.1:3333/PC/detail?id=${this.props.match.params.id}`).then((response)=>{
 		  return response.json();
 		}).then((data)=>{
 			

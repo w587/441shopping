@@ -34,8 +34,6 @@ export default class Use extends React.Component{
 	}
 
   	showModal(index){
-
-  	  console.log(index)
   	  this.setState({
   	    visible: true,
   	    states:index
@@ -53,17 +51,26 @@ export default class Use extends React.Component{
   	    visible: false,
   	  });
   	}
+
+  	change(useState){
+  		this.props.change(useState)
+  	}
 	render(){
-		
+		console.log('xx',this.props.useState)
+		var Block=this.props.useState==''
+		?<div>
+		 	<a onClick={this.showModal.bind(this,2)} style={{marginLeft:20,marginRight:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>登陆</a>
+		 	<span style={{color:'rgb(180,180,180)',lineHeight:"40px"}}>|</span>
+		 	<a onClick={this.showModal.bind(this,1)} style={{marginLeft:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>注册</a>
+		 </div>
+		:<span style={{color:'rgb(255,255,255)'}}>{this.props.useState}</span>
+
 		return (
 			<div style={{width:'100%',height:40,backgroundColor:'rgb(30,30,30)',borderBottom:'1px solid gray'}}>
 				<div className='HeadUseBox'>
 					<span style={{marginLeft:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>您好，欢迎光临441商城</span>
-					<a onClick={this.showModal.bind(this,2)} style={{marginLeft:20,marginRight:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>登陆</a>
-					<span style={{color:'rgb(180,180,180)',lineHeight:"40px"}}>|</span>
-					<a onClick={this.showModal.bind(this,1)} style={{marginLeft:20,color:'rgb(180,180,180)',lineHeight:"40px"}}>注册</a>
-			        
-			        <UseModal stase={this.state.states} visible={this.state.visible} onOk={this.handleOk.bind(this)} onCancel={this.handleCancel.bind(this)}/>
+					{Block}
+			        <UseModal change={this.change.bind(this)} stase={this.state.states} visible={this.state.visible} onOk={this.handleOk.bind(this)} onCancel={this.handleCancel.bind(this)}/>
 
 					<ShowCat />
 				</div>

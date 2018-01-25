@@ -24,7 +24,7 @@ export default class BigModule extends React.Component{
 
 	 componentWillMount(){
 		var than=this
-      	fetch(`http://127.0.0.1:3000/PC/BigMould?id=${this.state.id}`).then((response)=>{
+      	fetch(`http://127.0.0.1:3333/PC/BigMould?id=${this.state.id}`).then((response)=>{
 		  return response.json();
 		}).then((data)=>{
 		 	this.setState({

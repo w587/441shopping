@@ -38,10 +38,14 @@ export default class UseModal extends React.Component{
   	handleCancel(e){
   	 this.props.onCancel();
   	}
+
+  	change(useState){
+  		this.props.change(useState)
+  	}
 	render(){
 		var forms=this.props.stase==1
 		?<Regist onOk={this.handleOk.bind(this)}/>
-		:<Login onOk={this.handleOk.bind(this)}/>
+		:<Login change={this.change.bind(this)} onOk={this.handleOk.bind(this)}/>
 
 		return (
 			<Modal

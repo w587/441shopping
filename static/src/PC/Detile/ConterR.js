@@ -87,7 +87,7 @@ export default class Detail extends React.Component{
 	click(){
 		console.log('进入购物车',this.props.datas.id)
 		var than=this
-      	fetch(`http://127.0.0.1:3000/PC/detail/ShowCart?id=${this.props.datas.id}`)
+      	fetch(`http://127.0.0.1:3333/PC/detail/ShowCart?id=${this.props.datas.id}`)
 	}
 	
 }

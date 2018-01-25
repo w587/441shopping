@@ -20,11 +20,13 @@ class Login extends React.Component{
     this.props.form.validateFields((err, values) => {
       if (!err) {
         var data=JSON.stringify(values)
-        fetch(`http://127.0.0.1:3000/PC/Login?data=${data}`).then((response)=>{
+        fetch(`http://127.0.0.1:3333/PC/Login?data=${data}`).then((response)=>{
           return response.json();
         }).then((data)=>{
            if (data.state==1) {
             message.success('登录成功',3);
+            
+            this.props.change(data.useState)
             this.props.onOk();
           }else{
             message.error('登录失败：帐号或密码有误',3);

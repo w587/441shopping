@@ -12,39 +12,39 @@ import CustSever from '../Comm/CustSever.js';
 var datas=require('../../data/SItem.json')
 
 export default class Index extends React.Component{
+	constructor(){
+		super();
+		this.state={
+			useState:''
+		}
+	}
 	componentWillMount(){
 		var than=this
       	console.log('componentWillMount');
 
-      	fetch(`http://127.0.0.1:3000/PC?name=1`).then((response)=>{
+      	fetch(`http://127.0.0.1:3333/PC?name=1`).then((response)=>{
 		  return response.json();
 		}).then((data)=>{
-		 	console.log(data)
+		 	console.log(data.state=='yes')
+		 	if (data.state=='yes') {
+		 		this.setState({
+		 			useState:data.useState
+		 		})
+		 	}
+
 		})
 
   	}
-  	 //组件是否要被重新渲染
-	  shouldComponentUpdate(){
-	      console.log('shouldComponentUpdate');
-	      return true;
-	  }
-	  //组件将要被重新渲染
-	  componentWillUpdate(){
-	      console.log('componentWillUpdate');
-	  }
-	   //组件已经被重新渲染
-	   componentDidUpdate(){
-	       console.log('componentDidUpdate');
-	   }
-	  //组件将要接收到新属性
-	  componnentWillReceiveProps(){
-	      console.log('componnentWillReceiveProps');
-	  }
+
+  	change(useState){
+  		this.setState({
+			useState:useState
+		})
+  	}
 	render(){
-		
 		return (
 			<div>
-				<Use />
+				<Use useState={this.state.useState} change={this.change.bind(this)}/>
 				{/*内容块*/}
 				<div style={{width:'90%',margin:'0 auto',display: 'flex',flexDirection: 'column'}}>
 					{/*用户工具*/}

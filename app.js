@@ -4,22 +4,25 @@ var app=express();
 // 获取cookie-parser 模块，用于实现cookie数据的存储
 var cookieParser = require('cookie-parser');
 // 获取cookie-session 模块  用于实现sessin数据的存储
-var cookieSession = require('cookie-session');
+var cookieSession = require('express-session');
+var bodyParser = require('body-parser');
 
 app.set('view engine','ejs')
+app.set('views','./view');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(cookieParser());
-
-var arr = [];
-for(var i=0;i<100000;i++){
-	arr.push(Math.random()*i + 'a');
-}
-
 app.use(cookieSession({
-	keys:arr,
-	maxAge:3600*1000
+  secret: '12345',
+  name: 'name',
+  cookie: {maxAge: 60000*36},
+  resave: false,
+  saveUninitialized: true,
 }));
 
 app.use('/PC',require('./router/PC/index.js')());
 
-app.listen(3000);
+app.listen(3333);
 app.use(expressStatic('./static'))

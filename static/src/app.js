@@ -5,7 +5,7 @@ import MediaQuery from 'react-responsive';
 import 'antd/dist/antd.css';
 
 import PC from './PC/PC.js'
-import Phone from './Phone/Index.js'
+import Phone from './Phone/Phone.js'
 
 import {Router,
   Route,

@@ -18,7 +18,7 @@ export default class StarItem extends React.Component{
 
     componentWillMount(){
 		var than=this
-      	fetch(`http://127.0.0.1:3000/PC/StarItem?index=${this.props.index}`).then((response)=>{
+      	fetch(`http://127.0.0.1:3333/PC/StarItem?index=${this.props.index}`).then((response)=>{
 		  return response.json();
 		}).then((data)=>{
 			
