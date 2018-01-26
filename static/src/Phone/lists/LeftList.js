@@ -2,10 +2,13 @@ import React from 'react';
 
 import { Tabs, WhiteSpace } from 'antd-mobile';
 
+var data=require('../../data/BigModuIBox.json')
 const tabs = [
-  { title: '1 Tab' },
-  { title: '2 Tab' },
-  { title: '3 Tab' },
+  { title: '游戏台式机' },
+  { title: '雷神Dino' },
+  { title: '雷神911' },
+  { title: '雷神ST' },
+  { title: '游戏专区' },
 ];
 
 export default class LeftList extends React.Component {
@@ -16,28 +19,66 @@ export default class LeftList extends React.Component {
     };
   }
 
+
   render() {
+
+  var items1=data[0].items.map((item, index)=>{
     return (
-    <Tabs tabs={tabs}
-      initalPage={'t2'}
-      tabBarPosition="left"
-      tabDirection="vertical"
-      usePaged="true"
-      style={{height:'100%'}}
-    >
+        <div style={{width:'50%',display: 'flex',alignItems:'center',flexDirection:'column'}} key={index}>
+          <img style={{width:100,height:100}} src={item.img} />
+          <p style={{textAlign:'center'}}>{item.name}</p>
+         </div>
+      ) 
+  })
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '500px', backgroundColor: '#fff' }}>
-        Content of first tab
-      </div>
+   var items2=data[1].items.map((item, index)=>{
+    return (
+        <div style={{width:'50%',display: 'flex',alignItems:'center',flexDirection:'column'}} key={index}>
+          <img style={{width:100,height:100}} src={item.img} />
+          <p style={{textAlign:'center'}}>{item.name}</p>
+         </div>
+      ) 
+  })
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '500px', backgroundColor: '#fff' }}>
-        Content of second tab
-      </div>
+   var items3=data[2].items.map((item, index)=>{
+    return (
+        <div style={{width:'50%',display: 'flex',alignItems:'center',flexDirection:'column'}} key={index}>
+          <img style={{width:100,height:100}} src={item.img} />
+          <p style={{textAlign:'center'}}>{item.name}</p>
+         </div>
+      ) 
+  })
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '500px', backgroundColor: '#fff' }}>
-        Content of third tab
+   var items4=data[3].items.map((item, index)=>{
+    return (
+        <div style={{width:'50%',display: 'flex',alignItems:'center',flexDirection:'column'}} key={index}>
+          <img style={{width:100,height:100}} src={item.img} />
+          <p style={{textAlign:'center'}}>{item.name}</p>
+         </div>
+      ) 
+  })
+
+
+    return (
+      <div  style={{position:'absolute',width:'100%',top:0,bottom:0}}>
+       <Tabs tabBarPosition='left' tabDirection="vertical" tabs={tabs} initialPage={0} useOnPan={false}>
+        <div style={{ flexWrap:'wrap', display: 'flex', justifyContent: 'space-around', backgroundColor: '#fff' }}>
+          {items1}
+        </div>
+        <div style={{flexWrap:'wrap', display: 'flex', justifyContent: 'space-around', backgroundColor: '#fff' }}>
+         {items2}
+        </div>
+        <div style={{flexWrap:'wrap', display: 'flex', justifyContent: 'space-around', backgroundColor: '#fff' }}>
+          {items3}
+        </div>
+        <div style={{flexWrap:'wrap', display: 'flex', justifyContent: 'space-around', backgroundColor: '#fff' }}>
+          {items4}
+        </div>
+        <div style={{flexWrap:'wrap', display: 'flex', justifyContent: 'space-around', backgroundColor: '#fff' }}>
+          {items1}
+        </div>
+      </Tabs>
       </div>
-    </Tabs>
     );
   }
 }
